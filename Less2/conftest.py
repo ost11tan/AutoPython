@@ -34,3 +34,28 @@ def x_selector_4():
 @pytest.fixture()
 def expected_result_2():
     return f"Hello, {user}"
+
+@pytest.fixture()
+def x_selector_home1():
+    return """//*[@id="create-btn"]"""
+
+@pytest.fixture()
+def title_home1():
+    return """//*[@id="create-item"]/div/div/div[1]/div/label/input"""
+
+@pytest.fixture()
+def description_home1():
+    return """//*[@id="create-item"]/div/div/div[2]/div/label/span/textarea"""
+
+@pytest.fixture()
+def content_home1():
+    return """//*[@id="create-item"]/div/div/div[3]/div/label/span/textarea"""
+
+@pytest.fixture()
+def btn_home():
+    return """//*[@id="create-item"]/div/div/div[7]/div/button/span"""
+
+
+@pytest.fixture()
+def expected_result_3():
+     return """//*[@id="app"]/main/div/div[1]/h1"""

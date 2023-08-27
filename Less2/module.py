@@ -24,7 +24,7 @@ class Site:
             options = webdriver.ChromeOptions()
             self.driver = webdriver.Chrome(service=service, options=options)
         self.driver.implicitly_wait(testdata["implicitly_wait"])
-        self.driver = webdriver.Chrome(service=service, options=options)
+        #self.driver = webdriver.Chrome(service=service, options=options)
         self.driver.maximize_window()
         self.driver.get(address)
         time.sleep(testdata["sleep_time"])
@@ -44,3 +44,6 @@ class Site:
 
     def close(self):
         self.driver.close()
+
+    def pause(self):
+        time.sleep(testdata["sleep_time"])
